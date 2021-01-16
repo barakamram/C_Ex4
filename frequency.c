@@ -61,7 +61,6 @@ void free_node(node* node) {
 	return;
 }
 
-
 void print_frequency(node* head,char* c) {
 	for (int i = 0; i < NUM_LETTERS; i++)
 		if (head-> children[i] != NULL) {
@@ -76,13 +75,12 @@ void freq(node* node, char* c,int level) {
 
 	strncat(c, &node->letter, 1);
 	if (node-> isItWord == TRUE)
-		printf("%s\t%ld\n", c, node-> count);
+		printf("%s %ld\n", c, node-> count);
 
 	for (int i = 0; i < NUM_LETTERS; i++)
 		if (node-> children[i] != NULL)
 			freq(node-> children[i], c,level+1);
 }
-
 
 void print_frequency_reverse(node* head, char* c) {
 	for (int i = NUM_LETTERS-1; i >= 0; i--)
@@ -98,7 +96,7 @@ void freq_rev(node* node, char* c, int level) {
 
 	strncat(c, &node-> letter, 1);
 	if (node-> isItWord == TRUE)
-		printf("%s\t%ld\n", c, node-> count);
+		printf("%s %ld\n", c, node-> count);
 
 	for (int i = NUM_LETTERS-1; i>=0; i--)
 		if (node-> children[i] != NULL)
