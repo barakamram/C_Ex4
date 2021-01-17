@@ -13,14 +13,14 @@ typedef struct node {
 
 struct node* new_node();
 void chenge_letters(char str[]);
-void remove_letters(char* s);
+void remove_char(char* s);
 void add_word(node* head, char* word);
 void free_node(node* n);
 
-void print_frequency(node* head,char* c);
-void freq(node* node, char* c,int level);
+void print_words(node* head,char* c);
+void print_words_help(node* node, char* c,int level);
 
-void print_frequency_reverse(node* head, char* c);
-void freq_rev(node* node, char* c, int level);
+void print_words_reverse(node* head, char* c);
+void print_words_reverse_help(node* node, char* c, int level);
 
 #endif
